@@ -1,5 +1,4 @@
 
-### 4. `scripts/finetune.py`
 ```python
 import os
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, TrainingArguments, Trainer
@@ -7,7 +6,6 @@ from datasets import load_dataset
 import torch
 from peft import LoraConfig, get_peft_model, prepare_model_for_int8_training
 
-# Define constants
 project_name = 'finetune-llm'
 model_name = 'gpt2'
 
@@ -29,15 +27,12 @@ lora_r = 16
 lora_alpha = 32
 lora_dropout = 0.05
 
-# Load dataset
 data_path = "data/user_twit_bios.csv"
 dataset = load_dataset('csv', data_files=data_path)
 
-# Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
-# Prepare model for PEFT and LoRA
 if peft:
     model = prepare_model_for_int8_training(model)
     config = LoraConfig(
@@ -49,14 +44,12 @@ if peft:
     )
     model = get_peft_model(model, config)
 
-# Tokenize dataset
 def tokenize_function(examples):
     return tokenizer(examples["text"], padding="max_length", truncation=True, max_length=block_size)
 
 tokenized_datasets = dataset.map(tokenize_function, batched=True)
 tokenized_datasets = tokenized_datasets.rename_column("text", "input_ids")
 
-# Set training arguments
 training_args = TrainingArguments(
     output_dir="./results",
     learning_rate=learning_rate,
@@ -71,14 +64,12 @@ training_args = TrainingArguments(
     fp16=(mixed_precision == "fp16")
 )
 
-# Initialize Trainer
 trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=tokenized_datasets['train'],
 )
 
-# Train the model
 trainer.train()
 
 # Push to Hub
