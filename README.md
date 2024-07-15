@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-This project focuses on fine-tuning the GPT-2 model using the PEFT (Parameter-Efficient Fine-Tuning) and LoRA (Low-Rank Adaptation) techniques. The goal is to generate unique and engaging Twitter bios based on user-defined professions.
+This project focuses on fine-tuning the GPT-2 model using the PEFT (Parameter-Efficient Fine-Tuning) and LoRA (Low-Rank Adaptation) techniques. The goal is to generate unique and engaging Twitter bios based on user input.
 
 ### Key Features
 
