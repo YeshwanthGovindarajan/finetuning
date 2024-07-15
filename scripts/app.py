@@ -19,7 +19,7 @@ with col2:
 
 if generate_button and user_data:
     st.write("Please wait, generating the bio...")
-    model_name = "Yeshwanth-03-06-2004/gpt2-tweetgen"
+    model_name = "Your finetuned model name"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
 
