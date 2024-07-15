@@ -24,8 +24,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Yeshwanth-03-06-2004/googlebyt5-tweetgen.git
-   cd googlebyt5-tweetgen
+   git clone https://github.com/YeshwanthGovindarajan/finetuning.git
+   cd finetuning
    ```
 
 2. **Set Up Python Environment**
@@ -64,7 +64,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ### Contact
 Yeshwanth G - yeshwanthgovindarjan@gmail.com
-Project Link - https://github.com/Yeshwanth-03-06-2004/googlebyt5-tweetgen
+Project Link - https://github.com/YeshwanthGovindarajan/finetuning
 
 ### Acknowledgements
 - Hugging Face
