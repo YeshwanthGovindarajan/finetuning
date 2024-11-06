@@ -1,13 +1,13 @@
 
-# Fine-Tune GPT-2 Model
+# Fine-Tune GPT-2/LLaMA Model
 
 ## Project Overview
 
-This project focuses on fine-tuning the GPT-2 model using the PEFT (Parameter-Efficient Fine-Tuning) and LoRA (Low-Rank Adaptation) techniques. The goal is to generate unique and engaging Twitter bios based on user input.
+This project focuses on fine-tuning the GPT-2/LLaMA model using the PEFT (Parameter-Efficient Fine-Tuning) and LoRA (Low-Rank Adaptation) techniques. The goal is to generate unique and engaging Twitter bios based on user input.
 
 ### Key Features
 
-- **Model Fine-Tuning**: Fine-tunes the GPT-2 model to generate Twitter bios based on input professions.
+- **Model Fine-Tuning**: Fine-tunes the GPT-2/LLaMA model to generate Twitter bios based on input professions.
 - **PEFT and LoRA Integration**: Utilizes PEFT and LoRA techniques to enhance the fine-tuning process.
 - **Streamlit App**: Provides a user-friendly interface for generating Twitter bios using the fine-tuned model.
 
