@@ -3,6 +3,6 @@ datasets
 torch
 accelerate
 scipy
-sklearn
+scikit-learn==0.24.2  # or the latest stable version
 peft
 streamlit
