@@ -1,3 +1,5 @@
+%%writefile app.py
+
 import streamlit as st
 import pandas as pd
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
@@ -11,7 +13,7 @@ st.markdown(
     and let the AI generate a unique Twitter bio for you."""
 )
 
-col1, col2 = st.columns((3, 1))
+col1, col2 = st.columns((3,1))
 with col1:
     user_data = st.text_input('Enter Your Choice:', placeholder='E.g., Blockchain Developer')
 with col2:
@@ -19,7 +21,7 @@ with col2:
 
 if generate_button and user_data:
     st.write("Please wait, generating the bio...")
-    model_name = "Your finetuned model name"
+    model_name = "Yeshwanth-03-06-2004/gpt2-tweetgen"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
 
