@@ -1,6 +1,4 @@
-transformers
 datasets
-torch
 accelerate
 scipy
 peft
@@ -9,4 +7,5 @@ numpy>=1.24.0
 scikit-learn>=1.0.2  # A more recent version with pre-built wheels
 setuptools>=57.5  # Ensure setuptools is installed
 wheel>=0.36  # Ensure wheel is installed
-
+transformers>=4.0.0
+torch>=2.0.0
